@@ -9,5 +9,9 @@ module Types
     field :selection_required_max, Integer
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
+
+    field :modifiers, [Types::ModifierType], null: false
+    field :indirect_items, [Types::ItemType], null: false
+    field :direct_items, [Types::ItemType], null: false
   end
 end

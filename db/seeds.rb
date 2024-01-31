@@ -56,19 +56,19 @@ extra_large_pepperoni_pizza_item = Item.create!(
 
 # Non-configurable items
 SectionItem.create!(
-  section:,
+  section: section_without_configurable_items,
   item: margarita_pizza_item,
   display_order: 0
 )
 
 # Configurable items
 SectionItem.create!(
-  section:,
+  section: section_with_configurable_items,
   item: pepperoni_pizza_item,
   display_order: 0
 )
 SectionItem.create!(
-  section:,
+  section: section_with_configurable_items,
   item: extra_large_pepperoni_pizza_item,
   display_order: 0
 )
@@ -92,6 +92,6 @@ modifier = Modifier.create!(
 
 # Item Modifier Groups
 ItemModifierGroup.create!(
-  item: extra_large_pepperoni_pizza_item,
+  item: pepperoni_pizza_item,
   modifier_group: pizza_size_modifier_group
 )

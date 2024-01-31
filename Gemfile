@@ -70,5 +70,5 @@ group :test do
   gem 'selenium-webdriver'
 end
 
-gem 'graphiql-rails', github: 'rmosolgo/graphiql-rails', group: :development
+gem 'graphiql-rails', github: 'rmosolgo/graphiql-rails'
 gem 'graphql', '~> 2.2'

@@ -4,6 +4,7 @@ module Types
   class ModifierType < Types::BaseObject
     field :id, ID, null: false
     field :item_id, Integer, null: false
+    field :modifier_group_id, Integer, null: false
     field :display_order, Integer
     field :default_quantity, Integer
     field :price_override, Float

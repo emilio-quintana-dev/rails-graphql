@@ -11,9 +11,8 @@ module Types
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
 
-    field :section_items, [Types::SectionItemType], null: false
-    field :modifiers, [Types::ModifierType], null: false
-    field :direct_modifier_groups, [Types::ModifierGroupType], null: false, method: :direct_modifier_groups
-    field :indirect_modifier_groups, [Types::ModifierGroupType], null: false, method: :indirect_modifier_groups
+    field :section_item, Types::SectionItemType, null: false
+    field :modifier, Types::ModifierType
+    field :modifier_groups, [Types::ModifierGroupType], null: false
   end
 end

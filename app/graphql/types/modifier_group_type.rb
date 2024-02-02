@@ -11,7 +11,7 @@ module Types
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
 
     field :modifiers, [Types::ModifierType], null: false
-    field :indirect_items, [Types::ItemType], null: false
-    field :direct_items, [Types::ItemType], null: false
+    field :items, [Types::ItemType], null: false
+    field :item, Types::ItemType, null: true
   end
 end

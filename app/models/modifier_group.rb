@@ -1,9 +1,9 @@
 class ModifierGroup < ApplicationRecord
   has_many :modifiers
-  has_many :indirect_items, through: :modifiers, source: :item
+  has_many :items, through: :modifiers
 
-  has_many :item_modifier_groups, dependent: :destroy
-  has_many :direct_items, through: :item_modifier_groups, source: :item
+  has_one :item_modifier_group, dependent: :destroy
+  has_one :item, through: :item_modifier_group
 
   validates :identifier, presence: true, uniqueness: true
 end

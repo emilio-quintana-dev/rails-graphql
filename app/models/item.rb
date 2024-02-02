@@ -1,11 +1,9 @@
 class Item < ApplicationRecord
-  has_many :section_items
+  has_one :section_item
+  has_one :modifier
 
   has_many :item_modifier_groups
-  has_many :direct_modifier_groups, through: :item_modifier_groups, source: :modifier_group
-
-  has_many :modifiers
-  has_many :indirect_modifier_groups, through: :modifiers, source: :modifier_group
+  has_many :modifier_groups, through: :item_modifier_groups
 
   validates :identifier, presence: true, uniqueness: true
   validates :type, presence: true

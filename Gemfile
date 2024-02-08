@@ -4,8 +4,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.1.0'
 
 gem 'bootsnap', require: false
-gem 'graphiql-rails', github: 'rmosolgo/graphiql-rails'
-gem 'graphql', '~> 2.2'
 gem 'importmap-rails'
 gem 'jbuilder'
 gem 'pg'
@@ -30,3 +28,6 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
 end
+
+gem 'graphiql-rails', github: 'rmosolgo/graphiql-rails'
+gem 'graphql', '~> 2.2'

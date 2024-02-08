@@ -8,11 +8,14 @@ module Types
     field :label, String
     field :description, String
     field :price, Float
+    field :disabled, Boolean
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
 
     field :section_item, Types::SectionItemType, null: false
     field :modifier, Types::ModifierType
     field :modifier_groups, [Types::ModifierGroupType], null: false
+    field :modifiers, [Types::ModifierType]
+    field :items, [Types::ItemType]
   end
 end

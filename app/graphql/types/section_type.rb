@@ -7,6 +7,7 @@ module Types
     field :label, String
     field :description, String
     field :display_order, Integer
+    field :disabled, Boolean
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
 

@@ -8,7 +8,7 @@ module Types
     field :label, String
     field :description, String
     field :price, Float
-    field :disabled, Boolean
+    field :disabled, Boolean, null: false
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
 
